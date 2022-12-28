@@ -13,7 +13,7 @@
 
 https://drive.google.com/file/d/1_54K3a9qEfmRzhWDVl_372M3S3sHP4ep/view?usp=share_link
 
-CRUD de productos.
+This project was generated with Angular CLI version 15.0.4
 
 ## Built With
 

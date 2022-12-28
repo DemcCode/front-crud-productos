@@ -22,8 +22,8 @@
             <td>{{product.price | currency}}</td>
             <td>{{product.stock}}</td>
             <td>
-                <button type="button" class="btn btn-outline-info btn-sm" routerLink="/edit/{{product.id}}">Edit</button>
-                <button (click)="deleteProduct(product.id!)" type="button" class="btn btn-outline-danger btn-sm ms-2">Delete</button>
+                <button type="button" class="btn btn-outline-info btn-sm" routerLink="/edit/{{product.id}}">Editar</button>
+                <button (click)="deleteProduct(product.id!)" type="button" class="btn btn-outline-danger btn-sm ms-2">Eliminar</button>
             </td>
           </tr>
         </tbody>
