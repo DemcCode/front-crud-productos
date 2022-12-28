@@ -26,11 +26,3 @@ This project was generated with Angular CLI version 15.0.4
 * [Sequalize]()
 * [NodeJS]()
 * [Express]()
-
-## License
-
-Distributed under the MIT License. See [LICENSE](https://github.com/MoratDev/crud-productos/blob/main/LICENSE.md) for more information.
-
-## Authors
-
-* **Diego Mora** - ** - [Diego Mora](https://github.com/MoratDev) - **
