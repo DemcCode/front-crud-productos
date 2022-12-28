@@ -1,0 +1,37 @@
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+<div class="row mt-2" *ngIf="!loading">
+    <div class="col-lg-4 offset-lg-4">
+        <div class="card text-white bg-dark mb-4 mt-4" style="max-width: 23rem;">
+            <div class="card-header text-center">{{ operacion }} producto</div>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="addProduct()">
+                    <input formControlName="name" type="text" class="form-control" placeholder="Ingrese Nombre">
+                    <span *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">
+                        El campo nombre es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="description" type="text" class="form-control mt-4" placeholder="Ingrese Descripción">
+                    <span *ngIf="form.get('description')?.hasError('required') && form.get('description')?.touched">
+                        El campo descripcion es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="price" type="number" class="form-control mt-4" placeholder="Ingrese Precio">
+                    <span *ngIf="form.get('price')?.hasError('required') && form.get('price')?.touched">
+                        El campo price es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="stock" type="number" class="form-control mt-4" placeholder="Ingrese Stock">   
+                    <span *ngIf="form.get('stock')?.hasError('required') && form.get('stock')?.touched">
+                        El campo stock es <strong>requerido</strong>
+                    </span>             
+                    <div class="btn-agregar mt-4">
+                        <button type="button" class="btn btn-info" routerLink="/">Volver</button>
+                        <button [disabled]="form.invalid" type="submit" class="btn btn-success">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
+
+
