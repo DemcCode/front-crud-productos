@@ -53,9 +53,6 @@ export class AddEditProductsComponent {
   }
 
   addProduct() {
-    /*  console.log(this.form.value.name);
-     console.log(this.form.get('name')?.value); */
-
     const product: Product = {
       name: this.form.value.name,
       description: this.form.value.description,
@@ -68,16 +65,16 @@ export class AddEditProductsComponent {
       // Es editar 
       product.id = this.id;
       this._productService.updateProduct(this.id, product).subscribe(() => {
-        this.toastr.info(`El producto ${product.name} fue actualizado con exito`, 'Producto actualizado')
+        this.toastr.info(`El producto ${product.name} fue actualizado con exito`, 'Producto actualizado');
+        this.router.navigate(['/']);
       })
 
     } else {
       // Es agregagar
       this._productService.saveProduct(product).subscribe(() => {
-        this.toastr.success(`El producto ${product.name} fue registrado con exito`, 'Producto registrado')
+        this.toastr.success(`El producto ${product.name} fue registrado con exito`, 'Producto registrado');
+        this.router.navigate(['/']);  
       })
     }
-    this.loading = false;
-    this.router.navigate(['/']);
   }
 }
